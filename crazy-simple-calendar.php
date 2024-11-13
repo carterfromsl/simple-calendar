@@ -11,6 +11,12 @@ Requires PHP: 7.0
 Plugin URI: https://github.com/carterfromsl/simple-calendar/
 */
 
+require_once plugin_dir_path(__FILE__) . 'GitHubUpdater.php';
+
+if (is_admin()) {
+    new GitHubUpdater(__FILE__);
+}
+
 class Simple_Calendar_Plugin {
 	
 	public function register_query_vars($vars) {
