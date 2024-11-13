@@ -1,0 +1,56 @@
+.cs-cell-wrap {
+	display: grid;
+	width: 1200px;
+	max-width: 100%;
+	grid-template-columns: repeat(7,14%);
+	grid-gap: 0.285%;
+	float: none;
+	clear: both;
+	margin-top: 20px;
+}
+
+.cs-cell {
+	display: grid;
+	width: 100%;
+	align-content: start;
+}
+
+.cs-cell label {
+	display: block;
+	margin-top: 10px;
+}
+
+.cs-cell textarea {
+	max-width: 100%;
+	width: 100%;
+	margin: 0;
+	min-height: 60px;
+}
+
+.cs-admin .button-primary {
+	float: left;
+	clear: both;
+	margin-top: 20px;
+}
+
+.cs-meta {
+	width: 100%;
+	clear: both;
+	float: left;
+	padding-top: 10px;
+	margin-top: 20px;
+	border-top: 1px solid #ddd;
+}
+
+.cs-meta textarea {
+	max-width: 100%;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 1000px) {
+	.cs-cell-wrap {
+		grid-template-columns: repeat(2,49%);
+		grid-gap: 0 2%;
+	}
+}

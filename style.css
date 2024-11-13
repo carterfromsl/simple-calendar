@@ -1,0 +1,108 @@
+.cs-wrap .clear {
+	display: block;
+	float: none;
+	clear: both;
+	margin: 0;
+}
+
+.cs-wrap i {
+	font-family: inherit;
+	font-style: italic;
+}
+
+.cs-calendar .today {
+    background-color: lightgreen;
+}
+
+.cs-calendar {
+	overflow-y: auto;
+	margin: 15px 0;
+}
+
+.cs-calendar table {
+	min-width: 650px;
+	margin: 0;
+}
+
+.cs-calendar tr {
+	line-height: 1.5em;
+	height: 60px;
+}
+
+.cs-calendar tr:first-of-type {
+	height: auto;
+}
+
+.cs-calendar tr > * {
+	width: 14.25%;
+	padding: 10px;
+}
+
+.cs-calendar tr:nth-of-type(odd) {
+	background: rgba(0,0,0,0.1);
+}
+
+.cs-calendar th {
+	text-transform: uppercase;
+	font-weight: bold;
+	background-color: rgba(0,0,0,0.2);
+}
+
+.cs-nav a {
+	line-height: 1.5em;
+	padding: 5px 10px;
+	border: 1px solid;
+	font-size: 15px;
+	float: left;
+}
+
+.cs-search form {
+	display: flex;
+	width: 100%;
+	min-width: 300px;
+	margin: 0 !important;
+}
+
+.cs-search select,
+.cs-search button {
+	height: 40px;
+	border-radius: 0;
+	transition: all 0.3s ease;
+	cursor: pointer;
+	font-size: inherit;
+	margin: 0;
+}
+
+.cs-search button {
+	padding: 0 15px;
+}
+
+@media (min-width: 767px) {
+	.cs-nav {
+		width: max-content;
+		float: left;
+	}
+	.cs-nav #prev-month {
+		margin-right: 10px;
+	}
+	.cs-search {
+		float: right;
+	}
+	.cs-title {
+		text-align: left;
+	}
+}
+
+@media (max-width: 767px) {
+	.cs-search {
+		clear: both;
+		padding-top: 20px;
+		float: none;
+	}
+	.cs-search form {
+		min-width: 100%;
+	}
+	.cs-title {
+		text-align: center;
+	}
+}
