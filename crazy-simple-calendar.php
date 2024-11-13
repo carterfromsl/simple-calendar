@@ -5,7 +5,7 @@ Description: This is a super simple calendar plugin for managing a monthly table
 Version: 1.5.3
 Author: StratLab Marketing
 Author URI: https://stratlab.ca/
-Text Domain: css-manager
+Text Domain: simple-calendar
 Requires at least: 6.0
 Requires PHP: 7.0
 Plugin URI: https://github.com/carterfromsl/simple-calendar/
