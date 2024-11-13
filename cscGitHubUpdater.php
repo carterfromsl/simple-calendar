@@ -1,6 +1,6 @@
 <?php
 
-class GitHubUpdater {
+class cscGitHubUpdater {
     private $slug;
     private $pluginData;
     private $githubAPIResult;
