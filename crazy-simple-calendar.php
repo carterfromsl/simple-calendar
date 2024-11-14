@@ -2,7 +2,7 @@
 /*
 Plugin Name: Crazy Simple Calendar
 Description: This is a super simple calendar plugin for managing a monthly table of daily events.
-Version: 1.5.3.2
+Version: 1.5.3.3
 Author: StratLab Marketing
 Author URI: https://stratlab.ca/
 Text Domain: simple-calendar
@@ -407,7 +407,7 @@ class Simple_Calendar_Plugin {
 		$event = get_option($option_name, 'No events scheduled.');
 
 		// Generate the output
-		$output = "<p class='cs-event-single'><span class='cs-event-single-title'>Events for <strong>{$fullmonth} {$day}, {$year}</strong>: </span><span class='cs-event-single-content'>{$event}</span></p>";
+		$output = "<div class='cs-event-single'><h4 class='cs-event-single-title'>Events for <strong>{$fullmonth} {$day}, {$year}</strong>:</h4><div class='cs-event-single-content'>{$event}</div></div>";
 
 		return $output;
 	}
