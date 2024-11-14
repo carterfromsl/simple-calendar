@@ -11,11 +11,24 @@ Requires PHP: 7.0
 Plugin URI: https://github.com/carterfromsl/simple-calendar/
 */
 
-require_once plugin_dir_path(__FILE__) . 'cscGitHubUpdater.php';
+// Connect with the StratLab Auto-Updater for plugin updates
+add_action('plugins_loaded', function() {
+    if (class_exists('StratLabUpdater')) {
+        $plugin_file = __FILE__;
+        $plugin_data = get_plugin_data($plugin_file);
 
-if (is_admin()) {
-    new cscGitHubUpdater(__FILE__);
-}
+        do_action('stratlab_register_plugin', [
+            'slug' => plugin_basename($plugin_file),
+            'repo_url' => 'https://api.github.com/repos/carterfromsl/simple-calendar/releases/latest',
+            'version' => $plugin_data['Version'], 
+            'name' => $plugin_data['Name'],
+            'author' => $plugin_data['Author'],
+            'homepage' => $plugin_data['PluginURI'],
+            'description' => $plugin_data['Description'],
+            'access_token' => '', // Add if needed for private repo
+        ]);
+    }
+});
 
 class Simple_Calendar_Plugin {
 	
