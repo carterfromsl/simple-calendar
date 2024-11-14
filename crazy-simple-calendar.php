@@ -2,7 +2,7 @@
 /*
 Plugin Name: Crazy Simple Calendar
 Description: This is a super simple calendar plugin for managing a monthly table of daily events.
-Version: 1.5.3.1
+Version: 1.5.3.2
 Author: StratLab Marketing
 Author URI: https://stratlab.ca/
 Text Domain: simple-calendar
