@@ -2,7 +2,7 @@
 /*
 Plugin Name: Crazy Simple Calendar
 Description: This is a super simple calendar plugin for managing a monthly table of daily events.
-Version: 1.5.3.3
+Version: 1.5.3.4
 Author: StratLab Marketing
 Author URI: https://stratlab.ca/
 Text Domain: simple-calendar
@@ -14,6 +14,10 @@ Plugin URI: https://github.com/carterfromsl/simple-calendar/
 // Connect with the StratLab Auto-Updater for plugin updates
 add_action('plugins_loaded', function() {
     if (class_exists('StratLabUpdater')) {
+        if (!function_exists('get_plugin_data')) {
+            require_once ABSPATH . 'wp-admin/includes/plugin.php';
+        }
+        
         $plugin_file = __FILE__;
         $plugin_data = get_plugin_data($plugin_file);
 
